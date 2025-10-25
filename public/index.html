@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Julia PWA App</title>
+
+  <!-- PWA manifest -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#007bff">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 {
+      color: #007bff;
+    }
+    .btn {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #005fcc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to My Julia PWA 🚀</h1>
+  <p>This app is powered by Genie.jl and runs like a native mobile app!</p>
+  <button class="btn" onclick="alert('Julia is awesome! 💙')">Click Me</button>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(() => console.log('✅ Service worker registered'))
+        .catch(err => console.log('❌ Service worker failed:', err));
+    }
+  </script>
+</body>
+</html>
