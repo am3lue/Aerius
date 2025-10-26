@@ -1,7 +1,7 @@
 {
   "name": "Weather Data Analyst",
   "short_name": "Aerius",
-  "start_url": "/",
+  "start_url": "/welcome.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#007bff",

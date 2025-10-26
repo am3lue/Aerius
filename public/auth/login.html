@@ -7,33 +7,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Aerius :: Welcome Back Folk</title>
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap-grid.min.css" rel="stylesheet"
-    crossorigin="anonymous">
+  <!-- Bootstrap Grid -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap-grid.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Aerius Style -->
   <link href="css/genie/style.css" rel="stylesheet">
+
+  <!-- Prism (optional if you want syntax highlighting later) -->
   <link href="css/genie/prism.css" rel="stylesheet" />
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".side-menu"><body id="page-top" data-spy="scroll" data-target=".side-menu">
+<body id="page-top" data-spy="scroll" data-target=".side-menu">
+
   <div class="container-fluid">
     <!-- Start: Header -->
     <div class="row hero-header" id="home">
-      <div class="col-md-7">
-        <h1 id="main-heading">Login</h1>
-      <div class="col-md-5 hidden-xs">
-        <form action="loign-auth" method="get">
-            <label for="username">Username: </label>
-            <input type="text" name="username" id="username"><br><br>
-            <label for="passworrd">Passkey: </label>
-            <input type="password" name="password" id="password">
-            <input type="submit" value="Login" class="btn btn-lg">
-        </form>
+      <div class="col-md-7 content-ct">
+        <img src="../img/aerius/Aerius.png" alt="Aerius Logo" class="logo">
+        <h1 id="main-heading">Welcome Back 🌦️</h1>
+        <h4>Login to continue exploring your weather insights</h4>
       </div>
+
+      <div class="col-md-5 content-ct">
+        <form action="/login-auth" method="POST" style="margin-top: 3em; max-width: 350px; margin-left: auto; margin-right: auto;">
+          <div class="form-group">
+            <label for="Username">Username</label>
+            <input type="text" name="username" id="username" class="form-control" placeholder="Username" required><br>
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control" placeholder="Password" required><br>
+          </div>
+
+          <input type="submit" value="Login" class="btn btn-yellow btn-lg">
+          <p style="margin-top: 15px;">New here? <a href="signup.html" style="color:#fcd93b;">Create an account</a></p>
+        </form>
       </div>
     </div>
     <!-- End: Header -->
   </div>
-
+<br><br><br><br><br><br><br><br><br><br>
   <!-- Start: Footer -->
   <div class="container-fluid footer">
     <div class="row footer-credit">
@@ -44,17 +58,19 @@
         </p>
       </div>
       <div class="col-md-6 col-sm-6">
-        <p>
-          ©️ All rights reserved for the Aerius name, logo and overall branding.
-        </p>
+        <p>©️ All rights reserved for the Aerius name, logo, and overall branding.</p>
       </div>
     </div>
   </div>
   <!-- End: Footer -->
 
+  <!-- Scripts -->
   <script src="/js/genie/jquery.min.js"></script>
-  <script async="" defer="" src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
+  <script async defer src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
   <script src="/js/genie/prism.js"></script>
 
+</body>
 </html>

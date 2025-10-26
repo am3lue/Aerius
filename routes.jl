@@ -16,6 +16,10 @@ route("/signup") do
   serve_static_file(joinpath("auth","signup.html"))
 end
 
-route("login-auth") do 
+route("/login-auth") do 
   return "login successifully !"
+end
+
+route("/about") do 
+  serve_static_file("about.html")
 end
