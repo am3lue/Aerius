@@ -16,6 +16,7 @@ Genie.loadapp()
 
 cd(@__DIR__)
 Pkg.activate(".")
+Pkkg.instantiate()
 
 # !!! Main.UserApp is configured as an alias for Main.Aerius and you might encounter it in some tests
 using Main.Aerius, Test, TestSetExtensions, Logging
